@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+    <style>
+        .animated {
+           -webkit-animation-duration: 2.5s;
+           animation-duration: 2.5s;
+        }
+        
+        @-webkit-keyframes fadeIn {
+           0% {opacity: 0;}
+           100% {opacity: 1;}
+        }
+        
+        @keyframes fadeIn {
+           0% {opacity: 0;}
+           100% {opacity: 1;}
+        }
+        
+        .fadeIn {
+           -webkit-animation-name: fadeIn;
+           animation-name: fadeIn;
+        }
+     </style>
+
+<body style="margin-top: 10px; margin-left: 40px; margin-right: 40px; margin-bottom: 0px">
+<div class = "animated fadeIn">
+
+   <style>
+
+      /* Header Style */
+      .header {
+          background: #54b1f0;
+          color: rgb(12, 12, 12);
+          font-size: 30px;
+          font-family: Bell MT;
+      }
+      .footer {
+         background: #0ac250;
+         color: #F7F9F9;
+         font-size: 30px;
+         font-family: Bell MT;
+      }
+      .transition {
+         transition: font-size 0.5s;
+      }
+       
+      .transition:hover {
+         font-size: 18px;
+      }
+      
+      
+</style>
+      
+<!-- Header Part -->
+<div class="header">
+   
+<!-- Google Translator -->
+<div id="google_translate_element"></div>
+
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+{pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- Translator ends. -->
+
+<h1 style="text-align: center;">Welcome To Covid-19 Survey</h1>
+<br>
+</div>
+<!-- Header Ends -->
+<br>
+
+
+<p style="font-size:38px;font-family:Monotype Corsiva;color:rgb(231, 14, 14);line-height : 20px"><b>Greetings,</b></p>
+<p style="font-size:20.5px;font-family:Bell MT;color:rgb(0, 2, 128);text-align:justify;margin-right:100px"><b>
+Covid-19 pandemic has affected the whole world in a number of ways, from changing our lifestyle to the way we think. This virus has definitely locked us down but has given us ample amount of time to think and nourish our mindsets.
+<br><br>
+So, we want to conduct a survey from you all to find out about the change in your mindsets that you had gone though during the lockdown compared to that with your daily busy routines.
+<br>
+
+
+<div class="transition"><h2 style="text-align: center"><a href = "\covid19_survey"><img src="{{url_for('static', filename='covid-icon.png')}}">Go To Survey<img src="{{url_for('static', filename='covid-icon.png')}}"></a></h2></div>
+<div class="transition"><h2 style="text-align: center;color:rgb(0, 2, 128)">Already given Survey? <a href = "\graph">See Survey Analysis!</a></h2></div>
+
+<div class="footer">
+<h2 style="text-align: center;padding: 3px;">Be Healthy... Be Safe!!</h2>
+</div>
+</div>    
+
+</body>
+</html>

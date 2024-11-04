@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+   <body>
+    <form action = "{{ url_for('user_report') }}" method = "POST">
+    <h2>Enter Your Contact Number Exactly Provided at the Time Of Survey:</h2>
+    <p style="font-size:19.5px;"><b>Your Contact Number:
+    <input type="text" name="contact" minlength="10" maxlength="10" size="10" style="font-size:18px;" oninput='this.style.width = (this.scrollWidth-5) + "px";' required>
+    <br><br>
+    <input type="submit" value="See Your Survey Report">
+    <!-- <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()"> -->
+
+<!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        function survey_analysis(){
+            $.ajax({
+              url: "graph.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+
+
+<input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "graph.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+  </body>
+</html> -->
+
+   </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+   <script>
+      if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+      }
+  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<center><h2>{{ msg }}</h2></center>
+
+<!-- <style>
+   table {
+     border-collapse: collapse;
+     width: 100%;
+   }
+   td {
+      text-align: center;
+    }
+   tr, td {
+      padding: 6px;
+    }
+</style>
+
+
+<h1><p style="text-align: center; color: blue;font-size:2.5vw">See Your Survey Report</h1></p>
+
+<div style="overflow-x:auto;">
+      <table border="1" cellpadding="4">
+      
+         <thead>
+            <td>Name</td>
+            <td>Contact Number</td>
+            <td>Age Group</td>
+            <td>Profession</td>
+            <td>Question-1</td>
+            <td>Question-2</td>
+            <td>Question-3</td>
+            <td>Question-4</td>
+            <td>Question-5</td>
+            <td>Question-6</td>
+            <td>Question-7</td>
+            <td>Question-8</td>
+            <td>Question-9</td>
+            <td>Question-10</td>
+         </thead>
+        
+      
+         {% for row in data %}
+             <tr>
+             {% for d in row %}
+                 <td>{{ d }}</td>
+             {% endfor %}
+             </tr>
+         {% endfor %}
+      </table>
+</div> -->
+
+
+<h1><p style="text-align: center; color: rgb(245, 58, 58);font-size:2.5vw">Overall NEFOWA Chhath Pooja 2024 Survey Analysis</h1></p>
+
+<!-- <img src="{{url_for('static', filename='question1.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question2.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question3.png')}}", style="max-width:100%;height:auto;">
+<center><img src="{{url_for('static', filename='question4.png')}}", style="max-width:100%;height:auto;"><img src="{{url_for('static', filename='question5.png')}}", style="max-width:100%;height:auto;"></center>
+<center><img src="{{url_for('static', filename='question6.png')}}", style="max-width:100%;height:auto;"><img src="{{url_for('static', filename='question7.png')}}", style="max-width:100%;height:auto;"></center>
+<img src="{{url_for('static', filename='question8.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question9.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question10.png')}}", style="max-width:100%;height:auto;"> -->
+
+<center>
+<img src="{{url_for('static', filename='question1.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question2.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question3.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question4.png')}}", style="max-width:100%;height:auto;">
+</center>
+<!-- <img src="{{url_for('static', filename='question5.png')}}", style="max-width:100%;height:auto;"> -->
+<!-- <center><img src="{{url_for('static', filename='question6.png')}}", style="max-width:100%;height:auto;"><img src="{{url_for('static', filename='question7.png')}}", style="max-width:100%;height:auto;"></center>
+<img src="{{url_for('static', filename='question8.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question9.png')}}", style="max-width:100%;height:auto;">
+<img src="{{url_for('static', filename='question10.png')}}", style="max-width:100%;height:auto;"> -->
+
+
+<center><h3><a href = "\">Go back to home page</a></h3></center>
+
+   </body>
+</html>

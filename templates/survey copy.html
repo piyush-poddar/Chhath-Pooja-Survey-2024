@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Covid-19 Survey. Covid-19 pandemic has affected the whole world in a number of ways, from changing our lifestyle to the way we think. This virus has definitely locked us down but has given us ample amount of time to think and nourish our mindsets. So, we want to conduct a survey from you all to find out about the change in your mindsets that you had gone though during the lockdown compared to that with your daily busy routines.">
+    <meta name="author" content="Learnersepoint">
+    <title>Covid-19 Survey</title>
+
+    <!-- Favicons-->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png"> -->
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet"> -->
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='menu.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='vendors.css')}}" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <!-- <link href="css/custom.css" rel="stylesheet"> -->
+	
+	<!-- MODERNIZR MENU -->
+	<!-- <script src="js/modernizr.js"></script> -->
+    <script src="{{url_for('static', filename='modernizr.js')}}"></script>
+	
+	<!-- <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-11097556-8']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script> -->
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<nav>
+		<ul class="cd-primary-nav">
+			<li><a href="\" class="animated_link">Home</a></li>
+			<li><a href="\graph" class="animated_link">See Survey Analysis</a></li>
+			<!-- <li><a href="review-wizard-version.html" class="animated_link">Review Version</a></li>
+			<li><a href="registration-wizard-version.html" class="animated_link">Registration Version</a></li>
+			<li><a href="about.html" class="animated_link">About Us</a></li>
+			<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+			<li><a href="rtl/index.html" class="animated_link">RTL Version</a></li> -->
+		</ul>
+	</nav>
+	<!-- /menu -->
+	
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper">
+					<!-- <a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a> -->
+					<!-- <div id="social">
+						<ul>
+							<li><a href="#0"><i class="icon-facebook"></i></a></li>
+							<li><a href="#0"><i class="icon-twitter"></i></a></li>
+							<li><a href="#0"><i class="icon-google"></i></a></li>
+							<li><a href="#0"><i class="icon-linkedin"></i></a></li>
+						</ul>
+					</div> -->
+					<!-- /social -->
+					<div>
+						<figure><img src="{{url_for('static', filename='info_graphic_1.svg')}}" alt="" class="img-fluid"></figure>
+						<h2>Covid-19 Survey</h2>
+						<p>Covid-19 pandemic has affected the whole world in a number of ways, from changing our lifestyle to the way we think. This virus has definitely locked us down but has given us ample amount of time to think and nourish our mindsets.
+							<br>
+							So, we want to conduct a survey from you all to find out about the change in your mindsets that you had gone though during the lockdown compared to that with your daily busy routines.</p>
+						<a href="\graph" class="btn_1 rounded" target="_parent">See Survey Analysis</a>
+						<!-- <a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a> -->
+					</div>
+					<!-- <div class="copy">© 2022 Wilio</div> -->
+				</div>
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+
+			<div class="col-lg-6 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form action = "{{ url_for('addrec') }}" id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<div id="middle-wizard">
+								<div class="step">
+									<h3 class="main_question"><strong>1/12</strong>Please fill with your details</h3>
+									<div class="form-group">
+										<input type="text" name="urname" class="form-control required" placeholder="Your Name">
+									</div>
+									<!-- <div class="form-group">
+										<input type="text" name="lastname" class="form-control required" placeholder="Last Name">
+									</div> -->
+									<div class="form-group">
+										<input type="email" name="email" class="form-control required" placeholder="Your Email">
+									</div>
+									<div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="profession">
+												<option value="">Your Profession</option>
+												<option value="Student">Student</option>
+												<option value="Teacher">Teacher</option>
+												<option value="Engineer">Engineer</option>
+												<option value="Manager">Manager</option>
+												<option value="Businessman">Businessman</option>
+                                                <option value="Housewife">Housewife</option>
+                                                <option value="Others">Others</option>                             
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-3">
+											<div class="form-group">
+												<input type="text" name="age" class="form-control" placeholder="Age">
+											</div>
+										</div>
+										<div class="col-9">
+											<div class="form-group radio_input">
+												<label class="container_radio">Male
+													<input type="radio" name="gender" value="Male" class="required">
+													<span class="checkmark"></span>
+												</label>
+												<label class="container_radio">Female
+													<input type="radio" name="gender" value="Female" class="required">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- /row -->
+									<!-- <div class="form-group terms">
+										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>
+											<input type="checkbox" name="terms" value="Yes" class="required">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>2/12</strong>Are you happy, as now you are spending a lot of time with your family members during the lockdown?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question1" value="Yes" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question1" value="No" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question1" value="Sometimes" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- <div class="form-group">
+										<label class="container_radio version_2">Completely Satisfied
+											<input type="radio" name="question_1" value="Completely Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+
+									<div class="form-group">
+										<label class="container_radio version_2">Extremely Satisfied
+											<input type="radio" name="question_1" value="Extremely Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>3/12</strong>Have you been able to bring any change in the mental health of any family members?</h3>
+									<!-- <div class="form-group">
+										<label class="container_check version_2">Google Search Engine
+											<input type="checkbox" name="question_2[]" value="Google Search Engine" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question2" value="Yes" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question2" value="No" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question2" value="Sometimes" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- <div class="form-group">
+										<label class="container_check version_2">Other
+											<input type="checkbox" name="question_2[]" value="Other" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+								</div>
+                                
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>4/12</strong>Have you developed new healthy eating habits?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question3" value="Yes" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question3" value="No" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question3" value="Sometimes" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- <div class="form-group">
+										<label class="container_radio version_2">100% Sure
+											<input type="radio" name="question_3" value="100% Sure" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label>In no, please describe with few words why</label>
+										<textarea name="additional_message" class="form-control" style="height:100px;" placeholder="Type here additional info..." onkeyup="getVals(this, 'additional_message');"></textarea>
+									</div> -->
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>5/12</strong>Do you feel that being at work you tend to ignore yourself and your health but now you are having your ‘Me time’?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question4" value="Yes" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question4" value="No" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes/Maybe
+											<input type="radio" name="question4" value="Sometimes/Maybe" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>6/12</strong>By spending a lot of time with your family members these days, do you feel more close to them now?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question5" value="Yes" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question5" value="No" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question5" value="Sometimes" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>7/12</strong>Have you adopted any new healthy habits in your daily routine to improve your health and wellness?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question6" value="Yes" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question6" value="No" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes/Maybe
+											<input type="radio" name="question6" value="Sometimes/Maybe" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>8/12</strong>Did you meditate or perform Yoga to improve your mental health?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question7" value="Yes" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question7" value="No" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes/Maybe
+											<input type="radio" name="question7" value="Sometimes/Maybe" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>9/12</strong>Do you agree that the lockdown has enabled you to communicate with your close ones as compared to your previous busy routine?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question8" value="Yes" class="required" onchange="getVals(this, 'question_8');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question8" value="No" class="required" onchange="getVals(this, 'question_8');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question8" value="Sometimes" class="required" onchange="getVals(this, 'question_8');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>10/12</strong>Do you feel that mental health is as important as the physical health and we should equally pay attention to it?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question9" value="Yes" class="required" onchange="getVals(this, 'question_9');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question9" value="No" class="required" onchange="getVals(this, 'question_9');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question9" value="Sometimes" class="required" onchange="getVals(this, 'question_9');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>11/12</strong>Do you agree that watching spiritual shows improves the health status of our minds?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question10" value="Yes" class="required" onchange="getVals(this, 'question_10');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question10" value="No" class="required" onchange="getVals(this, 'question_10');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question10" value="Sometimes" class="required" onchange="getVals(this, 'question_10');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+								<div class="submit step">
+									<h3 class="main_question"><strong>12/12</strong>Summary</h3>
+									<div class="summary">
+										<ul>
+											<li><strong>1</strong>
+												<h5>Are you happy, as now you are spending a lot of time with your family members during the lockdown?</h5>
+												<p id="question_1"></p>
+											</li>
+											<li><strong>2</strong>
+												<h5>Have you been able to bring any change in the mental health of any family members?</h5>
+												<p id="question_2"></p>
+											</li>
+											<li><strong>3</strong>
+												<h5>Have you developed new healthy eating habits?</h5>
+												<p id="question_3"></p>
+												<p id="additional_message"></p>
+											</li>
+                                            <li><strong>4</strong>
+												<h5>Do you feel that being at work you tend to ignore yourself and your health but now you are having your ‘Me time’?</h5>
+												<p id="question_4"></p>
+											</li>
+                                            <li><strong>5</strong>
+												<h5>By spending a lot of time with your family members these days, do you feel more close to them now?</h5>
+												<p id="question_5"></p>
+											</li>
+                                            <li><strong>6</strong>
+												<h5>Have you adopted any new healthy habits in your daily routine to improve your health and wellness?</h5>
+												<p id="question_6"></p>
+											</li>
+                                            <li><strong>7</strong>
+												<h5>Did you meditate or perform Yoga to improve your mental health?</h5>
+												<p id="question_7"></p>
+											</li>
+                                            <li><strong>8</strong>
+												<h5>Do you agree that the lockdown has enabled you to communicate with your close ones as compared to your previous busy routine?</h5>
+												<p id="question_8"></p>
+											</li>
+                                            <li><strong>9</strong>
+												<h5>Do you feel that mental health is as important as the physical health and we should equally pay attention to it?</h5>
+												<p id="question_9"></p>
+											</li>
+                                            <li><strong>10</strong>
+												<h5>Do you agree that watching spiritual shows improves the health status of our minds?</h5>
+												<p id="question_10"></p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward">Prev</button>
+								<button type="button" name="forward" class="forward">Next</button>
+								<button type="submit" name="process" class="submit">Submit</button>
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<!-- /menu button -->
+	
+	<!-- Modal terms -->
+	<!-- <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div> -->
+			<!-- /.modal-content -->
+		<!-- </div> -->
+		<!-- /.modal-dialog -->
+	<!-- </div> -->
+	<!-- /.modal -->
+	<!-- COMMON SCRIPTS -->
+	<!-- <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/functions.js"></script> -->
+    <script src="{{url_for('static', filename='jquery-3.5.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='common_scripts.min.js')}}"></script>
+    <script src="{{url_for('static', filename='velocity.min.js')}}"></script>
+    <script src="{{url_for('static', filename='functions.js')}}"></script>
+
+	<!-- Wizard script -->
+    <script src="{{url_for('static', filename='survey_func.js')}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve myproject
+After=network.target
+
+[Service]
+User=devopsadmin
+Group=devopsadmin
+WorkingDirectory=/home/devopsadmin/web_development/covid19_survey
+Environment="PATH=/home/devopsadmin/.local/share/virtualenvs/covid19_survey-GUxYL0bB/bin"
+ExecStart=/home/devopsadmin/.local/share/virtualenvs/covid19_survey-GUxYL0bB/bin/gunicorn -c gconfig.py -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

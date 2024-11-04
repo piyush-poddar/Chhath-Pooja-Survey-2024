@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thank you for joining NEFOWA’s Chhath Puja celebration! Your presence helped make this event truly special and memorable. To ensure we continue improving and creating meaningful experiences, we would love to hear your feedback.">
+    <meta name="author" content="Learnersepoint">
+    <title>नेफोवा छठ महापर्व 2024</title>
+
+    <!-- Favicons-->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png"> -->
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet"> -->
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='menu.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='vendors.css')}}" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <!-- <link href="css/custom.css" rel="stylesheet"> -->
+	
+	<!-- MODERNIZR MENU -->
+	<!-- <script src="js/modernizr.js"></script> -->
+    <script src="{{url_for('static', filename='modernizr.js')}}"></script>
+	
+	<!-- <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-11097556-8']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script> -->
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<nav>
+		<ul class="cd-primary-nav">
+			<li><a href="\" class="animated_link">Home</a></li>
+			<li><a href="\graph" class="animated_link">View NEFOWA Chhath Pooja 2024 <br>Survey Analysis</a></li>
+			<!-- <li><a href="review-wizard-version.html" class="animated_link">Review Version</a></li>
+			<li><a href="registration-wizard-version.html" class="animated_link">Registration Version</a></li>
+			<li><a href="about.html" class="animated_link">About Us</a></li>
+			<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+			<li><a href="rtl/index.html" class="animated_link">RTL Version</a></li> -->
+		</ul>
+	</nav>
+	<!-- /menu -->
+	
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper">
+					<!-- <a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a> -->
+					<!-- <div id="social">
+						<ul>
+							<li><a href="#0"><i class="icon-facebook"></i></a></li>
+							<li><a href="#0"><i class="icon-twitter"></i></a></li>
+							<li><a href="#0"><i class="icon-google"></i></a></li>
+							<li><a href="#0"><i class="icon-linkedin"></i></a></li>
+						</ul>
+					</div> -->
+					<!-- /social -->
+					<div>
+						<figure><img src="{{url_for('static', filename='chhath2.png')}}" alt="" class="img-fluid"></figure>
+						<h2>नेफोवा छठ महापर्व 2024</h2>
+						<p>
+							<b style="font-size: 25px;">जय छठी मैया</b>
+							<br><br>
+							Thank you for joining NEFOWA’s Chhath Mahaparv Celebration! Your presence made this event truly special and memorable. To ensure we continue improving and creating meaningful experiences, we would love to hear your feedback.
+							<br>
+							<!-- Please take a moment to share your thoughts with us. This survey focuses on what you enjoyed most, any areas that may need improvement, and suggestions for future celebrations. -->
+							<!-- <br><br> -->
+						
+							<a href="\graph" class="btn_1 rounded" target="_parent">View NEFOWA Chhath Pooja 2024 Survey Analysis</a>
+						</p>
+						<!-- <a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a> -->
+					</div>
+					<!-- <div class="copy">© 2022 Wilio</div> -->
+				</div>
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+
+			<div class="col-lg-6 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form action = "{{ url_for('addrec') }}" id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<div id="middle-wizard">
+								<div class="step">
+									<h3 class="main_question"><strong>1/7</strong>Please fill with your details</h3>
+									<div class="form-group">
+										<!-- <input type="text" name="urname" class="form-control required" placeholder="Your Name"> -->
+										<input type="text" name="urname" class="form-control required" placeholder="Your Name">
+									</div>
+									<!-- <div class="form-group">
+										<input type="text" name="lastname" class="form-control required" placeholder="Last Name">
+									</div> -->
+									<div class="form-group">
+										<!-- <input type="email" name="email" class="form-control required" placeholder="Your Email"> -->
+										<input type="text" name="society" class="form-control required" placeholder="Your Society">
+									</div>
+									<div class="form-group">
+										<!-- <input type="email" name="email" class="form-control required" placeholder="Your Email"> -->
+										<input type="number" name="mobile" class="form-control" placeholder="Your Mobile Number (Optional)">
+									</div>
+									<!-- <div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required" name="profession">
+												<option value="">Your Profession</option>
+												<option value="Student">Student</option>
+												<option value="Teacher">Teacher</option>
+												<option value="Engineer">Engineer</option>
+												<option value="Manager">Manager</option>
+												<option value="Businessman">Businessman</option>
+                                                <option value="Housewife">Housewife</option>
+                                                <option value="Others">Others</option>                             
+											</select>
+										</div>
+									</div> -->
+									<!-- <div class="row">
+										<div class="col-3">
+											<div class="form-group">
+												<input type="text" name="age" class="form-control" placeholder="Age">
+											</div>
+										</div>
+										<div class="col-9">
+											<div class="form-group radio_input">
+												<label class="container_radio">Male
+													<input type="radio" name="gender" value="Male" class="required">
+													<span class="checkmark"></span>
+												</label>
+												<label class="container_radio">Female
+													<input type="radio" name="gender" value="Female" class="required">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div> -->
+									<!-- /row -->
+									<!-- <div class="form-group terms">
+										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>
+											<input type="checkbox" name="terms" value="Yes" class="required">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>2/7</strong>How satisfied were you with the overall organization of the Chhath Pooja event?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Very Satisfied
+											<input type="radio" name="question1" value="Very Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Satisfied
+											<input type="radio" name="question1" value="Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Neutral
+											<input type="radio" name="question1" value="Neutral" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Dissatisfied
+											<input type="radio" name="question1" value="Dissatisfied" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Very Dissatisfied
+											<input type="radio" name="question1" value="Very Dissatisfied" class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>3/7</strong>What did you like most about this year’s Chhath Pooja celebration?</h3>
+									<!-- <div class="form-group">
+										<label class="container_check version_2">Google Search Engine
+											<input type="checkbox" name="question_2[]" value="Google Search Engine" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+									<div class="form-group">
+										<label class="container_radio version_2">NEFOWA Team Support
+											<input type="radio" name="question2" value="NEFOWA Team Support" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Pooja Ghat
+											<input type="radio" name="question2" value="Pooja Ghat" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Decoration and Lighting
+											<input type="radio" name="question2" value="Decoration and Lighting" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- <div class="form-group">
+										<label class="container_check version_2">Other
+											<input type="checkbox" name="question_2[]" value="Other" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+								</div>
+                                
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>4/7</strong>Were the arrangements for cleanliness and safety during the event adequate?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question3" value="Yes" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Needs Improvement
+											<input type="radio" name="question3" value="Needs Improvement" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<!-- <div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question3" value="Sometimes" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+									<!-- <div class="form-group">
+										<label class="container_radio version_2">100% Sure
+											<input type="radio" name="question_3" value="100% Sure" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label>In no, please describe with few words why</label>
+										<textarea name="additional_message" class="form-control" style="height:100px;" placeholder="Type here additional info..." onkeyup="getVals(this, 'additional_message');"></textarea>
+									</div> -->
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>5/7</strong>Would you attend and recommend our Chhath Pooja event to others next year?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question4" value="Yes" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question4" value="No" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Maybe
+											<input type="radio" name="question4" value="Maybe" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>6/7</strong>How can we improve future Chhath Pooja celebrations? (Please share any suggestions or feedback)</h3>
+									<div class="form-group">
+										<!-- <input type="text" name="urname" class="form-control-textarea required"> -->
+										<textarea name="question5" class="form-control-textarea" onchange="getVals(this, 'question_5');"></textarea>
+									</div>
+									<!-- <div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question5" value="Yes" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question5" value="No" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question5" value="Sometimes" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div> -->
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<!-- <div class="step">
+									<h3 class="main_question"><strong>7/12</strong>Have you adopted any new healthy habits in your daily routine to improve your health and wellness?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question6" value="Yes" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question6" value="No" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes/Maybe
+											<input type="radio" name="question6" value="Sometimes/Maybe" class="required" onchange="getVals(this, 'question_6');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+                                <!-- /step-->
+								<!-- <div class="step">
+									<h3 class="main_question"><strong>8/12</strong>Did you meditate or perform Yoga to improve your mental health?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question7" value="Yes" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question7" value="No" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes/Maybe
+											<input type="radio" name="question7" value="Sometimes/Maybe" class="required" onchange="getVals(this, 'question_7');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+                                <!-- /step-->
+								<!-- <div class="step">
+									<h3 class="main_question"><strong>9/12</strong>Do you agree that the lockdown has enabled you to communicate with your close ones as compared to your previous busy routine?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question8" value="Yes" class="required" onchange="getVals(this, 'question_8');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question8" value="No" class="required" onchange="getVals(this, 'question_8');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question8" value="Sometimes" class="required" onchange="getVals(this, 'question_8');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+                                <!-- /step-->
+								<!-- <div class="step">
+									<h3 class="main_question"><strong>10/12</strong>Do you feel that mental health is as important as the physical health and we should equally pay attention to it?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question9" value="Yes" class="required" onchange="getVals(this, 'question_9');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question9" value="No" class="required" onchange="getVals(this, 'question_9');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question9" value="Sometimes" class="required" onchange="getVals(this, 'question_9');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+                                <!-- /step-->
+								<!-- <div class="step">
+									<h3 class="main_question"><strong>11/12</strong>Do you agree that watching spiritual shows improves the health status of our minds?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question10" value="Yes" class="required" onchange="getVals(this, 'question_10');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question10" value="No" class="required" onchange="getVals(this, 'question_10');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Sometimes
+											<input type="radio" name="question10" value="Sometimes" class="required" onchange="getVals(this, 'question_10');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+								<div class="submit step">
+									<h3 class="main_question"><strong>7/7</strong>Summary</h3>
+									<div class="summary">
+										<ul>
+											<li><strong>1</strong>
+												<h5>How satisfied were you with the overall organization of the Chhath Puja event?</h5>
+												<p id="question_1"></p>
+											</li>
+											<li><strong>2</strong>
+												<h5>What did you enjoy most about this year’s Chhath Puja celebration?</h5>
+												<p id="question_2"></p>
+											</li>
+											<li><strong>3</strong>
+												<h5>Were the arrangements for cleanliness and safety during the event adequate?</h5>
+												<p id="question_3"></p>
+												<p id="additional_message"></p>
+											</li>
+                                            <li><strong>4</strong>
+												<h5>Would you attend or recommend our Chhath Puja event to others next year?</h5>
+												<p id="question_4"></p>
+											</li>
+                                            <li><strong>5</strong>
+												<h5>How can we improve future Chhath Puja celebrations? (Suggestions or Feedback)</h5>
+												<p id="question_5"></p>
+											</li>
+                                            <!-- <li><strong>6</strong>
+												<h5>Have you adopted any new healthy habits in your daily routine to improve your health and wellness?</h5>
+												<p id="question_6"></p>
+											</li>
+                                            <li><strong>7</strong>
+												<h5>Did you meditate or perform Yoga to improve your mental health?</h5>
+												<p id="question_7"></p>
+											</li>
+                                            <li><strong>8</strong>
+												<h5>Do you agree that the lockdown has enabled you to communicate with your close ones as compared to your previous busy routine?</h5>
+												<p id="question_8"></p>
+											</li>
+                                            <li><strong>9</strong>
+												<h5>Do you feel that mental health is as important as the physical health and we should equally pay attention to it?</h5>
+												<p id="question_9"></p>
+											</li>
+                                            <li><strong>10</strong>
+												<h5>Do you agree that watching spiritual shows improves the health status of our minds?</h5>
+												<p id="question_10"></p>
+											</li> -->
+										</ul>
+									</div>
+								</div>
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward">Prev</button>
+								<button type="button" name="forward" class="forward">Next</button>
+								<button type="submit" name="process" class="submit">Submit</button>
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<!-- /menu button -->
+	
+	<!-- Modal terms -->
+	<!-- <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div> -->
+			<!-- /.modal-content -->
+		<!-- </div> -->
+		<!-- /.modal-dialog -->
+	<!-- </div> -->
+	<!-- /.modal -->
+	<!-- COMMON SCRIPTS -->
+	<!-- <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/functions.js"></script> -->
+    <script src="{{url_for('static', filename='jquery-3.5.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='common_scripts.min.js')}}"></script>
+    <script src="{{url_for('static', filename='velocity.min.js')}}"></script>
+    <script src="{{url_for('static', filename='functions.js')}}"></script>
+
+	<!-- Wizard script -->
+    <script src="{{url_for('static', filename='survey_func.js')}}"></script>
+
+<!-- <script type="text/javascript"> //<![CDATA[
+  var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+  document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script language="JavaScript" type="text/javascript">
+  TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_md_167x42.png", "POSDV", "none");
+</script> -->
+
+
+
+</body>
+</html>
